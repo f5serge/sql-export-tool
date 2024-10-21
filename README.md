@@ -16,11 +16,11 @@ This tool exports data from Azure SQL tables to TSV (Tab-Separated Values) files
 
 ## Setup
 
-1. Clone this repository or copy the `export_to_csv.sh` script to your local machine.
+1. Clone this repository or copy the `export_to_tsv.sh` script to your local machine.
 
 2. Make the script executable:
    ``` bash
-   chmod +x export_to_csv.sh
+   chmod +x export_to_tsv.sh
    ```
 
 3. Create a `.env` file in the same directory as the scripts with the following content:
