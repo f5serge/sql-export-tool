@@ -1,10 +1,10 @@
 # Azure SQL Data Export and Import Tools
 
-This repository contains tools for exporting data from Azure SQL to CSV files and importing TSV files back into Azure SQL.
+This repository contains tools for exporting data from Azure SQL to TSV (Tab-Separated Values) files and importing TSV files back into Azure SQL.
 
 ## Export Tool
 
-This tool exports data from Azure SQL tables to CSV (Comma-Separated Values) files and uploads them to Azure Blob Storage.
+This tool exports data from Azure SQL tables to TSV (Tab-Separated Values) files and uploads them to Azure Blob Storage.
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ This tool exports data from Azure SQL tables to CSV (Comma-Separated Values) fil
 Run the script with the following command:
 
 ``` bash
-./export_to_csv.sh --schema <schema_name> --tables <table1,table2,...> --container <container-name> --path <blob-path> [--delimiter <delimiter>] [--dry-run]
+./export_to_tsv.sh --schema <schema_name> --tables <table1,table2,...> --container <container-name> --path <blob-path> [--delimiter <delimiter>] [--compress] [--generate-ddl] [--overwrite] [--dry-run] 
 ```
 
 ### Parameters:
@@ -48,6 +48,9 @@ Run the script with the following command:
 - `--container`: Azure Blob Storage container name
 - `--path`: Path within the container to store CSV files
 - `--delimiter`: (Optional) CSV delimiter (default: ',')
+- `--compress`: (Optional) Compress the TSV file using gzip before uploading
+- `--generate-ddl`: Generate SQL DDL for the tables
+- `--overwrite`: Overwrite existing blobs in Azure Storage
 - `--dry-run`: (Optional) Perform a dry run without exporting or uploading data
 
 ### Example:
